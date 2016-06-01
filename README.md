@@ -1,8 +1,14 @@
-#Install ember-cli-coffeescript
-Adds precompilation of CoffeeScript files and all the basic generation types to the ember generate command, as well as linting.
+# Power-Slides
 
-#Install ember new app
-Installing Ember javacript framework
+Implementing Power Point Slides
 
-# coffe-ember-slides
-Implementing Power Point slides with CoffeScript &amp; EmberJS framework
+## Getting Started
+
+- fork the project into your repository
+- clone the forked project into your computer
+
+### Requirements :
+
+- update .json packages : npm, bower
+- install coffescript with npm
+- install yuidoc with npm

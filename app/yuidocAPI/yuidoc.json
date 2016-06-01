@@ -1,0 +1,13 @@
+{
+    "name": "Power Slides",
+    "description": "Implement slides with CoffeScript and EmberJS",
+    "version": "0.0.1",
+    "url": "http://localhost:4200",
+    "options": {
+        "linkNatives": "true",
+        "attributesEmit": "true",
+        "selleck": "true",
+        "paths": "../../app/",
+        "outdir": "./yuidocAPI/out/"
+    }
+}
