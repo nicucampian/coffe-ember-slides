@@ -1,0 +1,9 @@
+{{#each buttons as |button|}}
+  {{icon-text-button
+    isSelected=(eq button holdClickedButton)
+    click=(action 'handleClick' button)
+    icon=button.icon
+    text=button.text
+  }}
+{{/each}}
+{{toolbar-color-picker onChange=(action onColor)}}

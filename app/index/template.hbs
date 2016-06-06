@@ -1,4 +1,6 @@
 <h2 id="title">Welcome to Ember</h2>
 {{button-image imgUrl=""}} <!--http://img-9gag-fun.9cache.com/photo/aX9Dopv_700b_v1.jpg-->
+{{canvas-toolbar handleClick = (action 'handleToolbarButton')
+  onColor = (action 'handleToolbarColor')
+}}
 {{layouts-list clickLayout=(action 'handleLayoutClick')}}
-{{outlet}}
