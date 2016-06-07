@@ -1,0 +1,8 @@
+{{#each layouts as |layout|}}
+  {{#if (eq layout.id holdLayoutId) }}
+    {{button-image imgUrl=layout.url click=(action 'clickLayout' layout) class="highlight-selected-button"}}
+  {{else}}
+    {{button-image imgUrl=layout.url click=(action 'clickLayout' layout) }}
+  {{/if}}
+{{/each}}
+{{yield}}
