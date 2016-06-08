@@ -8,17 +8,17 @@ moduleForComponent 'button-image', 'Unit | Component | button image', {
 }
 
 test 'it renders', (assert) ->
-  assert.expect 1  
+  assert.expect 1
   # Creates the component instance
   component = @subject()
   # Renders the component to the page
-  @render()  
+  @render()
   assert.equal @$().text().trim(), ''
   
 test 'it not receiving an image',(assert) ->
-   component = @subject()
-   @render hbs """{{button-image}}"""   
-   assert.equal component.get('imgUrl'), undefined   
+  component = @subject()
+  @render hbs """{{button-image}}"""
+  assert.equal component.get('imgUrl'), undefined
    
  test 'it\'s receiving an image',(assert) ->
    component = @subject()
