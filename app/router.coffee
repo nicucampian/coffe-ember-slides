@@ -5,6 +5,7 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
-  this.route('index', { path: '/' })
+  @route('index', {path: ''}, () ->
+    @route('canvas', {path: 'slides/:id'}))
 
 `export default Router`
