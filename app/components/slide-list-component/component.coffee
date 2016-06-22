@@ -2,7 +2,7 @@
 
 SlideListComponentComponent = Ember.Component.extend
   classNames: ['slide-list']
-  dragulaconfig =
+  dragulaconfig :
     option :
       direction: 'vertical'
       copy: false
@@ -10,10 +10,8 @@ SlideListComponentComponent = Ember.Component.extend
       removeOnSpill: false
     enabledEvents: ['drag','drop']
   actions:
-    addEmptySlide: () ->
     handleSlideClick: (slideItem) ->
       @set 'selectedSlide', slideItem
       @sendAction 'handleSlideClick',slideItem
-    removeSlide: () ->
 
 `export default SlideListComponentComponent`

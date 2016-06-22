@@ -76,7 +76,7 @@ const shapes =
       width: "200px",
       height: "50px",
       id: 1,
-      slide: 1
+      slide: 2
     },
     {
       type: "text",
@@ -86,7 +86,7 @@ const shapes =
       width: "100px",
       height: "30px",
       id: 2,
-      slide: 1
+      slide: 2
     },
     {
       type: "text",
@@ -116,7 +116,7 @@ const shapes =
       width: "200px",
       height: "200px",
       id: 5,
-      slide: 3
+      slide: 1
     },
     {
       type:"picture",
@@ -126,7 +126,7 @@ const shapes =
       width: "200px",
       height: "200px",
       id: 6,
-      slide: 1
+      slide: 2
     },
     {
       type:"picture",
@@ -136,7 +136,7 @@ const shapes =
       width: "200px",
       height: "200px",
       id: 7,
-      slide: 1
+      slide: 3
     },
     {
       type: "picture",
