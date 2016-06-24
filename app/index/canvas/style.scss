@@ -1,0 +1,12 @@
+.canvasBox {
+  position: relative;
+  width: 100%;
+  min-height: 620px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  img, div[contenteditable] {
+    position: absolute;
+  }
+}
+

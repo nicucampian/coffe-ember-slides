@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
-
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/coffee-ember-slides.css">
 
@@ -19,7 +20,12 @@
 
     <script src="assets/vendor.js"></script>
     <script src="assets/coffee-ember-slides.js"></script>
-
+    <script type="text/javascript">
+      $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
     {{content-for "body-footer"}}
   </body>
 </html>

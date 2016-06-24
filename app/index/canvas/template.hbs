@@ -1,3 +1,11 @@
-{{canvas-slide
- shapes=model
-}}
+<div class="canvasBox">
+  {{#each model as |data|}} 
+    {{#if (eq data.type 'picture')}}
+      <img src={{data.content}} alt="" style="width:{{data.width}}px; height:{{data.height}}px; top: {{data.y}}; left:{{data.x}}">
+    {{else if data.layoutId}}
+      <div contenteditable style="width:{{data.width}}px; height:{{data.height}}px; top: {{data.y}}; left:{{data.x}}" placeholder="{{data.content}}"></div>
+    {{else}}
+      <div contenteditable style="width:{{data.width}}px; height:{{data.height}}px; top: {{data.y}}; left:{{data.x}}">{{data.content}}</div>
+    {{/if}}
+  {{/each}}
+</div>

@@ -1,14 +1,37 @@
-{{canvas-toolbar handleClick = (action 'handleToolbarButton')
-onColor = (action 'handleToolbarColor')
-}}
-{{slide-list-component
-slides=model.slides
-handleSlideClick = (action 'handleSlideClick')
-addEmptySlide = (action 'addEmptySlide')
-removeSlide = (action 'removeSlide')}}
-<div class="canvas-slide">
-  {{outlet}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 toolbar">
+      {{canvas-toolbar handleClick = (action 'handleToolbarButton')
+        onColor = (action 'handleToolbarColor')
+      }}
+      <h2 class="pull-right">Welcome, User, to Ember Slides!</h2>
+    </div>
+    <div class="col-md-2">
+      {{slide-list-component
+      slides=model.slides
+      handleSlideClick = (action 'handleSlideClick')
+      addEmptySlide = (action 'addEmptySlide')
+      removeSlide = (action 'removeSlide')}}
+    </div>
+    <div class="col-md-8">
+      {{outlet}}
+    </div>
+    <div class="col-md-2">
+      <ul class="nav nav-tabs" role="tablist" id="myTabs">
+        <li role="presentation" class="active"><a data-target="#layouts" aria-controls="layouts" role="tab" data-toggle="tab">Layouts</a></li>
+        <li role="presentation"><a data-target="#properties" aria-controls="profile" role="tab" data-toggle="tab">Properties</a></li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="layouts">
+          {{layouts-list
+          layouts=model.layouts
+          clickLayout=(action 'handleLayoutClick')}}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="properties">
+          dasdasd
+        </div>
+      </div>
+    </div>
+  </div> 
 </div>
-{{layouts-list
-   layouts=model.layouts
-  clickLayout=(action 'handleLayoutClick')}}
