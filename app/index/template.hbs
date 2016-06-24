@@ -1,6 +1,12 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Welcome to Ember 2</h2>
 {{button-image imgUrl=""}} <!--http://img-9gag-fun.9cache.com/photo/aX9Dopv_700b_v1.jpg-->
 {{canvas-toolbar handleClick = (action 'handleToolbarButton')
   onColor = (action 'handleToolbarColor')
 }}
+<div>
+  <h1> Hello Canvas</h1>
+  {{outlet}}
+</div>
+{{slide-list-component slides=model.slides
+handleSlideClick = (action 'handleSlideClick')}}
 {{layouts-list clickLayout=(action 'handleLayoutClick')}}

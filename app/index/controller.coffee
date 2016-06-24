@@ -8,5 +8,7 @@ IndexController = Ember.Controller.extend
       console.log('handleToolbarButton : ', param)
     handleToolbarColor: (color) ->
       console.log('handleToolbarColor : ', color)
+    handleSlideClick: (slide) ->
+      @transitionToRoute('index.canvas', slide.id)
 
 `export default IndexController`
