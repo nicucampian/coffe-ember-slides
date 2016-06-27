@@ -4,11 +4,11 @@
       {{slide-single-component
         setIndex=index
         handleSlideClick=(action 'handleSlideClick' slideItem)
-        handleSlideRemoveClick=(action 'removeSlide' slideItem)
+        handleSlideRemoveClick=(action removeSlide slideItem)
         isSelected=(eq slideItem selectedSlide)}}
     {{/each}}
   {{/ember-dragula-container }}
 {{/ember-dragula }}
 <div class="wraper-add-button">
-{{button-image imgUrl = 'assets/slide/add.png' click =(action 'addEmptySlide')}}
+{{button-image imgUrl = 'assets/slide/add.png' click =(action addEmptySlide)}}
 </div>

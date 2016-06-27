@@ -1,0 +1,11 @@
+{{#ember-dragula config=dragulaconfig drop='onDrop'}}
+  {{#ember-dragula-container }}
+    {{#each shapes as |shape|}}
+      {{#if (eq shape.type isText)}}
+          {{canvas-item-text shape=shape}}
+      {{else}}
+          {{canvas-item-picture shape=shape}}
+      {{/if}}
+    {{/each}}
+  {{/ember-dragula-container }}
+{{/ember-dragula}}

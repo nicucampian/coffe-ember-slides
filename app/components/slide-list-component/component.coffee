@@ -10,10 +10,8 @@ SlideListComponentComponent = Ember.Component.extend
       removeOnSpill: false
     enabledEvents: ['drag','drop']
   actions:
-    addEmptySlide: () ->
     handleSlideClick: (slideItem) ->
       @set 'selectedSlide', slideItem
       @sendAction 'handleSlideClick',slideItem
-    removeSlide: () ->
 
 `export default SlideListComponentComponent`
