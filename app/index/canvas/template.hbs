@@ -1,2 +1,11 @@
-{{outlet}}
-<h1> CANVAS TEMPLATE</h1>
+<div class="canvasBox">
+  {{#each model as |data|}} 
+    {{#if (eq data.type 'picture')}}
+      <img src={{data.content}} alt="" style="width:{{data.width}}px; height:{{data.height}}px; top: {{data.y}}; left:{{data.x}}">
+    {{else if data.layoutId}}
+      <textarea style="width:{{data.width}}px; height:{{data.height}}px; top: {{data.y}}; left:{{data.x}}" placeholder="{{data.content}}"></textarea>
+    {{else}}
+      <textarea style="width:{{data.width}}px; height:{{data.height}}px; top: {{data.y}}; left:{{data.x}}">{{data.content}}</textarea>
+    {{/if}}
+  {{/each}}
+</div>

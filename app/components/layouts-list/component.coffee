@@ -1,5 +1,4 @@
 `import Ember from 'ember'`
-`import bringLayouts from './layouts'`
 
 LayoutsListComponent = Ember.Component.extend
   classNames: ['layouts-list']
@@ -7,8 +6,6 @@ LayoutsListComponent = Ember.Component.extend
   actions:
     clickLayout: (param) ->
       @set('holdLayoutId', param.id)
-  init: () ->
-    this._super(arguments ...)
-    this.layouts = bringLayouts
+      @sendAction('clickLayout', param)
     
 `export default LayoutsListComponent`

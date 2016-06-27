@@ -3,7 +3,7 @@
 IndexController = Ember.Controller.extend
   actions:
     handleLayoutClick: (param) ->
-      console.log("handleLayoutClick :", param)
+      @store.query('shape',{type:'layouts',id:param.get('id')})
     handleToolbarButton: (param) ->
       console.log('handleToolbarButton : ', param)
     handleToolbarColor: (color) ->
