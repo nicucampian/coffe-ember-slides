@@ -1,7 +1,11 @@
-.layouts-list > * {
-  display: block;
+.layouts-list button {
+  display: inline-block;
+  margin: 10px 11px 10px 0;
+  padding: 3px;
 }
 
+.layouts-list button:nth-of-type(2n) {}
+
 .highlight-selected-button {
-  background-color: yellow;
+  background-color: #C7E7CF;
 }

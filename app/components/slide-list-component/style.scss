@@ -1,9 +1,23 @@
 .slide-list{
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
   box-sizing: border-box;
   height: 620px;
+  padding-right: 5px;
 }
+
+.slide-list::-webkit-scrollbar{
+  width: 8px;
+} 
+
+.slide-list::-webkit-scrollbar-thumb{
+  background-color: rgba(77, 136, 136, 0.39);
+  border-radius:5px;
+}
+
+.slide-list::-webkit-scrollbar-thumb:active{
+  background-color:#ccc;
+} 
 
 .wraper-add-button{
   text-align: center;
@@ -16,4 +30,5 @@
 
 .btn-add i.fa {
   font-size:40px;
+  color: #44A5B8;
 }

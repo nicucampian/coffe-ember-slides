@@ -1,8 +1,5 @@
 <div class="slide-preview" {{action 'handleSlideClick' slideSelected}}>
   <span class="id-slide" >{{plus-one setIndex}}</span>
-  <div class="slide-content">
-    
-  </div>
   {{#button-image click =(action 'handleSlideRemoveClick') class="btn-remove"}}
     <i class="fa fa-trash-o" aria-hidden="true"></i>
   {{/button-image}}
