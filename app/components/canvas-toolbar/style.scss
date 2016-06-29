@@ -1,8 +1,14 @@
 .canvas-toolbar {
-  background-color: #D3D3D3;
+  float: left;
 }
+
 .canvas-toolbar > * {
-  display: inline-block;
-  width: 50px;
-  vertical-align: middle;
+
+}
+
+button {
+  background-color: #fff;
+  border: none;
+  padding: 15px;
+  text-transform: uppercase!important;
 }

@@ -1,15 +1,19 @@
 .slide-list{
-  left: 0px;
-  top: 0px;
-  bottom: 0px;
-  display: inline-block;
   overflow-y: scroll;
   overflow-x: hidden;
   box-sizing: border-box;
-  background-color: #d9d9d9;
+  height: 620px;
 }
 
 .wraper-add-button{
   text-align: center;
   margin-top: 20px;
+}
+
+.btn-add {
+  outline: none;
+}
+
+.btn-add i.fa {
+  font-size:40px;
 }

@@ -1,21 +1,20 @@
-.canvas-toolbar {
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.toolbar {
+  margin-bottom: 20px;
   width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background: #7db9e8; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #7db9e8 0%, #2989d8 50%, #1e5799 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #7db9e8 0%,#2989d8 50%,#1e5799 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.slide-list {
-  width: 15%;
-  height: 100%;
-  vertical-align: top;
-}
-.layouts-list {
-  height: 100%;
-  width: 15%;
-  display: inline-block;
-  vertical-align: top;
-}
-.canvas-slide {
-  margin-top: 2px;
-  width: 68%;
-  display: inline-block;
-  background-color: lightgrey;
-  vertical-align: top;
+
+.toolbar h2 {
+  font-size: 16px;
+  color: #fff;
 }

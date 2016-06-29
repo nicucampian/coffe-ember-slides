@@ -18,7 +18,7 @@ IndexController = Ember.Controller.extend
       lastSlide = @store.peekAll('slide').get('length')
       @store.createRecord('slide', { title: 'Slide ' + Number(lastSlide + 1) })
     removeSlide: (slide) ->
-        localSlide = @store.peekRecord('slide',slide.get('id'))
-        @store.unloadRecord(localSlide)
+      localSlide = @store.peekRecord('slide',slide.get('id'))
+      @store.unloadRecord(localSlide)
 
 `export default IndexController`
