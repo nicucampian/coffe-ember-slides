@@ -1,10 +1,9 @@
 `import Ember from 'ember'`
 
 IndexRoute = Ember.Route.extend
-  model: () ->
+  model: (param) ->
     return Ember.RSVP.hash({
-      slides: this.store.findAll('slide')
-      layouts: this.store.findAll('layout')
+      presentation: @store.findRecord('presentation', param.id)
     })
 
 `export default IndexRoute`

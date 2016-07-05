@@ -1,0 +1,14 @@
+<div class="head-panel">
+  <p {{action 'clickLayout'}}> Layouts </p>
+  <p {{action 'clickProperties'}}> Properties  </p>
+</div>
+
+{{#if isLayouts}}
+  {{layouts-list
+     clickPrototype = clickPrototype }}
+{{/if}}
+
+{{#if isProperties}}
+  <p> Background : </p>
+  {{canvas-properties-color-picker onChange=onColorChange}}
+{{/if}}

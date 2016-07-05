@@ -1,24 +1,34 @@
 `import Ember from 'ember'`
 
 IndexController = Ember.Controller.extend
-  shapesLayout: undefined
-  shapesSlide: undefined
   actions:
-    handleLayoutClick: (param) ->
-      @set('shapesLayout', @store.query('shape',{ type:'layouts', id: param.get('id') }))
-      @transitionToRoute('index.canvas', @get('shapesLayout'))
+    handleLayoutClick: (layout) ->
+      @transitionToRoute('index.canvas', layout.get('id'))
+
     handleToolbarButton: (param) ->
       console.log('handleToolbarButton : ', param)
+
     handleToolbarColor: (color) ->
       console.log('handleToolbarColor : ', color)
-    handleSlideClick: (slide) ->
-      @set('shapesSlide', @store.query('shape', {type:'slides', id: slide.get('id')}))
-      @transitionToRoute('index.canvas', @get('shapesSlide'))
-    addEmptySlide: () ->
-      lastSlide = @store.peekAll('slide').get('length')
-      @store.createRecord('slide', { title: 'Slide ' + Number(lastSlide + 1) })
-    removeSlide: (slide) ->
-        localSlide = @store.peekRecord('slide',slide.get('id'))
-        @store.unloadRecord(localSlide)
+
+    handlePrototypeClick: (prototype) ->
+      # @send('addEmptyLayout') if @get('model.presentation').get('layouts').get('length') == 0
+      @send('addEmptyLayout')
+      console.log('layout', prototype.shapes.length)
+
+    handlePanelColorChange: (colorLayout) ->
+      console.log(colorLayout)
+
+    addEmptyLayout: () ->
+      date = new Date()
+      layout = @store.createRecord('layout', { id: date.getTime(), presentation: @get('model.presentation') } )
+      layout.save()
+      @get('model.presentation').get('layouts').pushObject(layout)
+      @get('model.presentation').save()
+
+    removeLayout: (layout) ->
+      layout = @store.findRecord('layout', layout.get('id'))
+      layout.deleteRecord()
+      @get('model.presentation').save()
 
 `export default IndexController`
