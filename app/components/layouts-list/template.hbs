@@ -1,8 +1,8 @@
 {{#each layouts as |layout|}}
-  {{#if (eq layout.id holdLayoutId) }}
-    {{button-image imgUrl=layout.url click=(action 'clickLayout' layout) class="highlight-selected-button"}}
+  {{#if (eq layout holdLayout) }}
+    {{button-image imgUrl=layout.url click=(action 'clickPrototype' layout) class="layout-selected"}}
   {{else}}
-    {{button-image imgUrl=layout.url click=(action 'clickLayout' layout) }}
+    {{button-image imgUrl=layout.url click=(action 'clickPrototype' layout) }}
   {{/if}}
 {{/each}}
 {{yield}}

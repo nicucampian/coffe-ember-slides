@@ -4,5 +4,5 @@ import { hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   title: DS.attr('string'),
-  shapes: hasMany('shape'),
+  layouts: hasMany('layout'),
 });

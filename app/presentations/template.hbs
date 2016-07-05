@@ -1,0 +1,11 @@
+<div class='presentations'>
+
+  <h1> Presentations </h1>
+
+{{#each model.presentations as |presentation|}}
+  <h2{{action 'handleClickPresentation' presentation}}>{{presentation.title}}</h2>
+{{/each}}
+
+{{button-image imgUrl = 'assets/slide/add.png' click =(action 'addEmptyPresentation')}}
+
+</div>

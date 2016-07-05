@@ -1,0 +1,15 @@
+.title-presentation {
+  cursor:default;
+  font-size: 32px;
+  text-align: center;
+}
+
+.title-selected {
+  contenteditable: true;
+  cursor:text;
+}
+
+.title-deSelected {
+  contenteditable: false;
+  cursor:default;
+}

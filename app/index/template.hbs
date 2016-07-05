@@ -1,14 +1,20 @@
 {{canvas-toolbar handleClick = (action 'handleToolbarButton')
 onColor = (action 'handleToolbarColor')
 }}
+
+{{index-presentation-title presentation = model.presentation}}
+
 {{slide-list-component
-slides=model.slides
-handleSlideClick = (action 'handleSlideClick')
-addEmptySlide = (action 'addEmptySlide')
-removeSlide = (action 'removeSlide')}}
+slides=model.presentation.layouts
+handleSlideClick = (action 'handleLayoutClick')
+addEmptySlide = (action 'addEmptyLayout')
+removeSlide = (action 'removeLayout')}}
+
 <div class="canvas-slide">
   {{outlet}}
 </div>
-{{layouts-list
-   layouts=model.layouts
-  clickLayout=(action 'handleLayoutClick')}}
+
+{{canvas-panel-properties
+  clickPrototype =(action 'handlePrototypeClick')
+  onColorChange=(action 'handlePanelColorChange')
+}}
